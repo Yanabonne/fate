@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&display=swap");
+
 @font-face {
   src: url(fonts/Inter-Regular.woff2) format("woff2"),
     url(fonts/Inter-Regular.woff) format("woff");
@@ -17,4 +19,33 @@
     url(fonts/Inter-Black.woff) format("woff");
   font-family: "Inter";
   font-weight: 900;
+}
+
+@mixin font-corm-xs($f) {
+  font-size: $f;
+  font-family: "Cormorant", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin font-inter-s($f) {
+  font-size: $f;
+  font-family: "Inter";
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-inter-m($f) {
+  font-size: $f;
+  font-family: "Inter";
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin font-inter-xl($f) {
+  font-size: $f;
+  font-family: "Inter";
+  font-weight: 900;
+  font-style: normal;
 }
