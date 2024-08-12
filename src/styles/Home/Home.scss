@@ -1,1 +1,78 @@
+@import "../../vendor/fonts.scss";
 
+.home {
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  max-width: 1300px;
+  display: flex;
+}
+
+.main__beige {
+  width: 100%;
+  background-color: #d7cddf;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main_1 {
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main_services {
+  gap: 30px;
+  flex-direction: column;
+}
+
+.main_curved {
+  padding: 30px 0 0;
+  max-width: none;
+}
+
+.main__curved_1 {
+  background-color: #d7cddf;
+  border-radius: 0 30px 0 0;
+  height: 50px;
+  width: 50%;
+}
+
+.main__curved_2 {
+  background-color: #d7cddf;
+  border-radius: 30px 0 0 0;
+  height: 50px;
+  width: 50%;
+}
+
+.main__title {
+  @include font-corm-xs(60px);
+}
+
+.main__title_1 {
+  text-align: center;
+}
+
+.main__subtitle {
+  @include font-inter-s(24px);
+  text-align: center;
+}
+
+.main__img {
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.main__img_deck {
+  width: 100%;
+  padding-top: 15px;
+  height: 600px;
+}

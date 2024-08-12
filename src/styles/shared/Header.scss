@@ -1,18 +1,42 @@
 @import "../../vendor/fonts.scss";
 
 .header {
-  @include font-inter-m(20px);
-  max-width: 1300px;
-  padding: 20px 0;
-  margin: 0 30px;
+  //   max-width: 1300px;
+  padding: 20px 0 15px;
   border-bottom: #262225 solid 1px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-sizing: border-box;
+  width: calc(100% - 60px);
+  background-color: #ad9db7;
 }
 
 .header__logo {
   height: 40px;
   width: 150px;
   margin-left: 15px;
+}
+
+.header__nav {
+  margin-top: auto;
+  display: flex;
+  align-items: end;
+  gap: 20px;
+  color: #262225;
+  margin-right: 15px;
+
+  .header__link {
+    color: #262225;
+    @include font-inter-s(20px);
+    text-decoration: none;
+  }
+
+  .header__link_active {
+    text-decoration: underline;
+  }
 }
