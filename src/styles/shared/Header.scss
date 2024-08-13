@@ -34,16 +34,39 @@
   display: flex;
   align-items: end;
   gap: 20px;
-  color: #262225;
   margin-right: 15px;
 
   .header__link {
-    color: #262225;
     @include font-inter-s(20px);
     text-decoration: none;
+    color: #262225;
   }
 
   .header__link_active {
     text-decoration: underline;
   }
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #262225;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

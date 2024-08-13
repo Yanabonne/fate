@@ -1,0 +1,48 @@
+@import "../../vendor/fonts.scss";
+
+.footer {
+  width: 100%;
+}
+
+.footer__footer {
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: calc(100% - 60px);
+  margin: 0 auto;
+}
+
+.footer__link {
+  color: #262225;
+}
+
+.footer__logo {
+  height: 40px;
+  width: 150px;
+  margin-left: 15px;
+  color: #262225;
+}
+
+.footer__container {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  padding-top: 13px;
+}
+
+.footer__text {
+  @include font-inter-s(20px);
+  padding-top: 3px;
+}
+
+.footer__icon {
+  width: 30px;
+  height: 30px;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #262225;
+}
