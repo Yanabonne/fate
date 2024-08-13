@@ -2,18 +2,25 @@
 
 .header {
   //   max-width: 1300px;
+  position: absolute;
+  //   position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ad9db7;
+  width: 100%;
+  padding-bottom: 1px;
+  //   backdrop-filter: blur(20px);
+}
+
+.header__header {
   padding: 20px 0 15px;
   border-bottom: #262225 solid 1px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, 0);
   box-sizing: border-box;
   width: calc(100% - 60px);
-  background-color: #ad9db7;
+  margin: 0 auto;
 }
 
 .header__logo {

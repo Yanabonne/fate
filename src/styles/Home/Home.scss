@@ -23,20 +23,49 @@
   flex-direction: column;
 }
 
+.main__dark {
+  width: 100%;
+  background-color: #473243;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .main_1 {
   gap: 30px;
   flex-direction: column;
   align-items: center;
 }
 
-.main_services {
+.main_wisdom {
   gap: 30px;
   flex-direction: column;
+  align-items: center;
+  padding: 70px 30px 80px;
+}
+
+.main_services {
+  flex-direction: column;
+  padding: 30px 30px 90px;
 }
 
 .main_curved {
   padding: 30px 0 0;
   max-width: none;
+  margin-bottom: -2px;
+}
+
+.main_curved_bottom {
+  padding: 0 0 30px;
+  max-width: none;
+  margin-top: -2px;
+}
+
+.main_motivation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px;
+  padding: 80px 30px;
 }
 
 .main__curved_1 {
@@ -49,6 +78,20 @@
 .main__curved_2 {
   background-color: #d7cddf;
   border-radius: 30px 0 0 0;
+  height: 50px;
+  width: 50%;
+}
+
+.main__curved_3 {
+  background-color: #d7cddf;
+  border-radius: 0 0 30px 0;
+  height: 50px;
+  width: 50%;
+}
+
+.main__curved_4 {
+  background-color: #d7cddf;
+  border-radius: 0 0 0 30px;
   height: 50px;
   width: 50%;
 }
@@ -75,4 +118,70 @@
   width: 100%;
   padding-top: 15px;
   height: 600px;
+}
+
+.main__img_card {
+  width: 100%;
+  height: 400px;
+}
+
+.main__services-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 0 30px;
+  min-height: 100px;
+  align-items: center;
+  border-top: 1px solid #262225;
+}
+
+.main__services-grid:first-of-type {
+  margin-top: 50px;
+}
+
+.main__services-grid:last-of-type {
+  border-bottom: 1px solid #262225;
+}
+
+.main__text {
+  @include font-inter-s(24px);
+}
+
+.main__text_s {
+  @include font-inter-s(20px);
+}
+
+.main__text_light {
+  color: #d7cddf;
+}
+
+.main__button {
+  outline: none;
+  border: none;
+  background-color: #473243;
+  color: #d7cddf;
+  @include font-inter-s(20px);
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__button_services {
+  margin-left: auto;
+  width: 200px;
+}
+
+.main__button_about {
+  width: 120px;
+}
+
+.main__button_light {
+  color: #262225;
+  background-color: #d7cddf;
+}
+
+.main__container {
+  display: flex;
+  gap: 35px;
+  flex-direction: column;
 }
