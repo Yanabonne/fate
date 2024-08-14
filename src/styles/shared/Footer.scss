@@ -46,3 +46,33 @@
   text-decoration: none;
   color: #262225;
 }
+
+@media screen and (max-width: 500px) {
+  .footer__container {
+    display: grid;
+    grid-template-columns: 2fr;
+    gap: 10px 15px;
+  }
+
+  .footer__text {
+    @include font-inter-s(16px);
+    grid-column-start: span 2;
+  }
+
+  .footer__icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .footer__logo {
+    width: 120px;
+  }
+
+  .footer__icon {
+    margin-left: auto;
+  }
+
+  .footer__link {
+    display: flex;
+  }
+}

@@ -84,7 +84,7 @@ export default function Main() {
           </h2>
           <p className="main__subtitle">Мудрость дня</p>
           <img
-            className="main__img main__img_deck"
+            className="main__img main__img_wisdom"
             alt="Hands holding magic sphere"
             src={wisdomImg}
           />
