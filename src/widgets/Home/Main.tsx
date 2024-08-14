@@ -66,9 +66,9 @@ export default function Main() {
               желания и мотивы. Вам не обязательно верить во всё, что здесь
               написано, главное enjoy and have fun!
             </div>
-            <div className="main__button main__button_light main__button_about">
+            <button className="main__button main__button_light main__button_about">
               О проекте
-            </div>
+            </button>
           </div>
           <img
             className="main__img main__img_card"

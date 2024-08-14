@@ -75,4 +75,10 @@
   .footer__link {
     display: flex;
   }
+
+  .account {
+    .footer__container {
+      padding: 0;
+    }
+  }
 }

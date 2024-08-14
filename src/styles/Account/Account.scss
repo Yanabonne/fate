@@ -1,0 +1,90 @@
+@import "../../vendor/fonts.scss";
+
+.account {
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.account__form {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+
+  h1,
+  label,
+  input,
+  button,
+  p {
+    width: 400px;
+  }
+}
+
+.account__title {
+  @include font-corm-xs(40px);
+  //   text-align: center;
+  padding-bottom: 10px;
+}
+
+.account__label {
+  @include font-inter-s(24px);
+}
+
+.account__input {
+  margin: 0;
+  outline: none;
+  padding: 10px;
+  @include font-inter-s(24px);
+  color: #262225;
+  box-sizing: border-box;
+  border: none;
+}
+
+.account__button {
+  outline: none;
+  border: none;
+  background-color: #473243;
+  color: #d7cddf;
+  @include font-inter-s(24px);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.account__input_incorrect {
+  outline: thick double red;
+}
+
+.account__text {
+  @include font-inter-s(16px);
+}
+
+@media screen and (max-width: 500px) {
+  .account__form {
+    gap: 15px;
+
+    h1,
+    label,
+    input,
+    button,
+    p {
+      width: 90%;
+    }
+  }
+
+  .account__title {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .account__label,
+  .account__input,
+  .account__button {
+    font-size: 20px;
+  }
+}
