@@ -1,9 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import deckImg from "../../images/deck.png";
 import cardImg from "../../images/card.png";
 import wisdomImg from "../../images/wisdom.png";
 
+const wolfQuotes = [
+  "Волк не тот, кто волк, а тот, кто волк",
+  "Псу - конура, волку - свобода, и никак иначе",
+  "Если волк молчит, то лучше его не перебивать",
+  //   "За двумя зайцами погонишься — рыбку из пруда не выловишь, делу время, а отмеришь семь раз…",
+  "Бесплатный сыр бывает только бесплатным",
+  "Лучше один раз упасть, чем сто раз упасть",
+  "Громко — это как тихо, только громче",
+  "Не стоит искать волка там, где его нет - его там нет",
+  "Падение - это не провал. Провал - это провал. Падение - это где упал.",
+];
+
 export default function Main() {
+  const [wolfQuote, setWolfQuote] = useState("");
+
+  useEffect(() => {
+    setWolfQuote(wolfQuotes[Math.floor(Math.random() * wolfQuotes.length)]);
+  }, []);
+
   return (
     <>
       <section className="main main_1">
@@ -79,9 +97,7 @@ export default function Main() {
       </section>
       <section className="main__beige">
         <div className="main main_wisdom">
-          <h2 className="main__title main__title_1">
-            "Волк не тот, кто волк, а тот, кто волк"
-          </h2>
+          <h2 className="main__title main__title_1">{wolfQuote}</h2>
           <p className="main__subtitle">Мудрость дня</p>
           <img
             className="main__img main__img_wisdom"
