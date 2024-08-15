@@ -160,7 +160,9 @@ export default function ChartCycles() {
               }}
             >
               {months.map((item, index) => (
-                <option value={index}>{item}</option>
+                <option key={index} value={index}>
+                  {item}
+                </option>
               ))}
             </select>
             <select
@@ -173,7 +175,9 @@ export default function ChartCycles() {
               }}
             >
               {yearsList.map((item) => (
-                <option value={item}>{item}</option>
+                <option key={item} value={item}>
+                  {item}
+                </option>
               ))}
             </select>
           </>
@@ -183,11 +187,7 @@ export default function ChartCycles() {
         <ResponsiveContainer>
           <LineChart width={400} height={300} data={data}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis
-              dataKey="name"
-              padding={{ left: 30, right: 30 }}
-              //   angle={-45}
-            />
+            <XAxis dataKey="name" padding={{ left: 30, right: 30 }} />
             <YAxis />
             <Legend />
             <Line
