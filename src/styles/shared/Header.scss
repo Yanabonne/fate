@@ -109,6 +109,7 @@
     height: 100vh;
     display: flex;
     justify-content: flex-end;
+    z-index: 1;
 
     .header__nav {
       display: flex;

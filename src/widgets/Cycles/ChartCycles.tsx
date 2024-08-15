@@ -63,8 +63,9 @@ export default function ChartCycles() {
       }
       setYearsList(allYears);
 
-      const startMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
-      const numberOfDaysInMonth = startMonth.getDate();
+      const endMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+      const startMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+      const numberOfDaysInMonth = endMonth.getDate();
       let allDates = [];
 
       const diff = startMonth.getTime() - birthday.getTime();
@@ -105,6 +106,45 @@ export default function ChartCycles() {
     }
   }, []);
 
+  function updateGraph(newMonth: string, newYear: string) {
+    const birthday = new Date(`${localStorage.getItem("birthday")}`);
+
+    const monthInt = newMonth === "0" ? 0 : Number(newMonth);
+    const yearInt = Number(newYear);
+
+    const endMonth = new Date(yearInt, monthInt + 1, 0);
+    const startMonth = new Date(yearInt, monthInt, 1);
+    const numberOfDaysInMonth = endMonth.getDate();
+    let allDates = [];
+
+    const diff = startMonth.getTime() - birthday.getTime();
+    const diffDays = Math.round(diff / (1000 * 3600 * 24));
+
+    const dayPhys = diffDays % 23;
+    const dayEmo = diffDays % 28;
+    const dayIntel = diffDays % 33;
+
+    for (let i = 0; i < numberOfDaysInMonth; i++) {
+      allDates.push({
+        name: `${i + 1}.${
+          `${monthInt + 1}`.length > 1 ? `${monthInt + 1}` : `0${monthInt + 1}`
+        }`,
+        phys:
+          dayPhys + i >= 23
+            ? physCycle[(dayPhys + i) % 23]
+            : physCycle[dayPhys + i],
+        emo:
+          dayEmo + i >= 28 ? emoCycle[(dayEmo + i) % 28] : emoCycle[dayEmo + i],
+        intel:
+          dayIntel + i >= 33
+            ? intelCycle[(dayIntel + i) % 33]
+            : intelCycle[dayIntel + i],
+      });
+    }
+
+    setData(allDates);
+  }
+
   return (
     <>
       <div className="cycles__selection">
@@ -116,6 +156,7 @@ export default function ChartCycles() {
               ref={inputMonthRef}
               onChange={(e) => {
                 setMonth(e.target.value);
+                updateGraph(e.target.value, year);
               }}
             >
               {months.map((item, index) => (
@@ -128,6 +169,7 @@ export default function ChartCycles() {
               value={year}
               onChange={(e) => {
                 setYear(e.target.value);
+                updateGraph(month, e.target.value);
               }}
             >
               {yearsList.map((item) => (
