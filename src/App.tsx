@@ -4,6 +4,8 @@ import "./App.css";
 import Home from "./pages/Home";
 import Account from "./pages/Account";
 import Cycles from "./pages/Cycles";
+import { ToastContainer, Zoom } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -14,6 +16,18 @@ function App() {
         <Route path="cycles" element={<Cycles />} />
         <Route path="*" element={<Navigate to="fate" />} />
       </Routes>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={2000}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+        transition={Zoom}
+      />
     </>
   );
 }

@@ -9,15 +9,33 @@
 
 .cycles__title {
   @include font-corm-xs(60px);
-  padding: 30px 0 15px;
+  padding: 30px 0 30px;
+}
+
+.cycles__subtitle {
+  @include font-corm-xs(60px);
+}
+
+.cycles__text {
+  @include font-inter-s(24px);
+}
+
+.cycles__text_bold {
+  @include font-inter-xl(24px);
+}
+
+.cycles__level-2 {
+  padding-left: 35%;
 }
 
 .cycles__chart {
-  margin: 30px;
+  margin: 30px 30px 60px;
   padding: 30px 30px 30px 0;
   background: white;
   width: 90%;
   height: 400px;
+  max-width: 1300px;
+  box-sizing: border-box;
 }
 
 .cycles__tooltip {
@@ -35,4 +53,68 @@
   span {
     @include font-corm-xs(26px);
   }
+}
+
+.cycles__container {
+  background-color: #473243;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p,
+  h2,
+  h3 {
+    max-width: 65%;
+    width: 65%;
+  }
+}
+
+.cycles__info {
+  color: #d7cddf;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 80px 30px;
+  max-width: 1300px;
+}
+
+.cycles__icon {
+  padding-top: 50px;
+}
+
+.cycles_curved_bottom {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  margin-top: -2px;
+}
+
+.cycles__curved_3 {
+  background-color: #473243;
+  border-radius: 0 0 30px 0;
+  height: 50px;
+  width: 50%;
+}
+
+.cycles__curved_4 {
+  background-color: #473243;
+  border-radius: 0 0 0 30px;
+  height: 50px;
+  width: 50%;
+}
+
+.cycles__selection {
+  display: flex;
+  gap: 15px;
+}
+
+.cycles__select {
+  outline: none;
+  border: #473243;
+  padding: 5px;
+  @include font-inter-s(20px);
+  width: 150px;
 }

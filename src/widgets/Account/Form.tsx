@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export default function Form() {
   const [inputName, setInputName] = useState("");
@@ -29,6 +30,9 @@ export default function Form() {
       localStorage.setItem("username", inputName);
       localStorage.setItem("birthday", inputDate);
       navigate("/fate");
+      toast("🔮 Ваши данные были успешно сохранены", {
+        progressStyle: { background: "#473243" },
+      });
     }
   }
 
