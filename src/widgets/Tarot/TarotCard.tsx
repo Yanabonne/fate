@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { tarotCardsList } from "../../utils/constantsTarot";
 import AllCards from "./AllCards";
+import OneCard from "./OneCard";
 
 export default function TarotCard() {
   const [section, setSection] = useState("one-card");
@@ -34,7 +35,13 @@ export default function TarotCard() {
           Все карты
         </button>
       </div>
-      <section className="tarot__section">
+      <section
+        className={
+          section === "one-card"
+            ? "tarot__section tarot__section_one"
+            : "tarot__section"
+        }
+      >
         {section === "all-cards" && (
           <>
             <AllCards
@@ -48,6 +55,7 @@ export default function TarotCard() {
             <AllCards indexStart={64} indexEnd={78} categoryName={"Пентакли"} />
           </>
         )}
+        {section === "one-card" && <OneCard />}
       </section>
     </>
   );

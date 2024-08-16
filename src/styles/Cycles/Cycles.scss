@@ -135,6 +135,15 @@
   .cycles__text_bold {
     @include font-inter-xl(20px);
   }
+
+  .cycles__chart {
+    margin: 30px 20px 40px;
+    width: calc(100% - 40px);
+  }
+
+  .cycles__info {
+    padding: 60px 20px;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -149,14 +158,5 @@
       max-width: 100%;
       width: 100%;
     }
-  }
-
-  .cycles__chart {
-    margin: 30px 20px 40px;
-    width: 93%;
-  }
-
-  .cycles__info {
-    padding: 60px 20px;
   }
 }

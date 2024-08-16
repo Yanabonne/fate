@@ -14,11 +14,20 @@
   max-width: 1300px;
   display: flex;
   flex-direction: column;
-  font-size: 40px;
 }
 
-.tarot__section:hover {
-  cursor: url("../../images/card.png"), auto;
+.tarot__section_one {
+  padding: 40px 0 0;
+}
+
+.tarot__one-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #d7cddf;
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 
 .tarot__title {
@@ -28,6 +37,11 @@
 
 .tarot__subtitle {
   @include font-corm-xs(45px);
+  padding: 20px 0 20px;
+}
+
+.tarot__subtitle_one {
+  align-self: center;
   padding: 20px 0 20px;
 }
 
@@ -67,6 +81,21 @@
   color: #d7cddf;
 }
 
+.tarot__new-card-button {
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  min-width: 200px;
+  @include font-inter-s(24px);
+  background-color: #473243;
+  color: #d7cddf;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
 .tarot__all {
   width: 100%;
   max-width: 1300px;
@@ -88,7 +117,7 @@
 }
 
 .tarot__all-question::after {
-  content: "+";
+  content: "🌚";
   position: absolute;
   top: 50%;
   right: 0px;
@@ -113,7 +142,7 @@
     margin-bottom: 15px;
 
     &::after {
-      content: "-";
+      content: "🌝";
     }
   }
 
@@ -133,8 +162,166 @@
   border-radius: 20px;
   border: #473243 1px solid;
   align-self: center;
+  margin-top: 15px;
 }
 
 .tarot__img {
   width: 90%;
+}
+
+.tarot__flip-card {
+  background-color: transparent;
+  width: 400px;
+  height: 710px;
+  perspective: 1000px;
+  align-self: center;
+}
+
+.tarot__flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tarot__flip-card_active .tarot__flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.tarot__flip-card-front,
+.tarot__flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.tarot__flip-img-back {
+  width: 400px;
+  height: 710px;
+  object-fit: contain;
+  background-color: black;
+  object-position: 50% 50%;
+  object-fit: cover;
+}
+
+.tarot__flip-img-back-2 {
+  width: 385px;
+  height: 695px;
+  object-fit: contain;
+  background-color: white;
+  object-position: 50% 50%;
+  object-fit: contain;
+}
+
+.tarot__flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.tarot__flip-card-back {
+  background-color: white;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.tarot_curved {
+  padding: 30px 0 0;
+  max-width: none;
+  margin-bottom: -2px;
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  margin-top: 20px;
+}
+
+.tarot_curved_bottom {
+  padding: 0;
+  max-width: none;
+  margin-top: -2px;
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+}
+
+.tarot__curved_1 {
+  background-color: #d7cddf;
+  border-radius: 0 30px 0 0;
+  height: 50px;
+  width: 50%;
+}
+
+.tarot__curved_2 {
+  background-color: #d7cddf;
+  border-radius: 30px 0 0 0;
+  height: 50px;
+  width: 50%;
+}
+
+.tarot__curved_3 {
+  background-color: #d7cddf;
+  border-radius: 0 0 30px 0;
+  height: 50px;
+  width: 50%;
+}
+
+.tarot__curved_4 {
+  background-color: #d7cddf;
+  border-radius: 0 0 0 30px;
+  height: 50px;
+  width: 50%;
+}
+
+@media screen and (max-width: 990px) {
+  .tarot__title {
+    @include font-corm-xs(35px);
+    padding: 30px 0 30px;
+  }
+
+  .tarot__subtitle {
+    @include font-corm-xs(35px);
+    padding: 20px 0 20px;
+  }
+
+  .tarot__all-question {
+    @include font-inter-s(20px);
+  }
+
+  .tarot__all-title {
+    @include font-inter-xl(20px);
+  }
+
+  .tarot__all-text {
+    @include font-inter-s(20px);
+  }
+
+  .tarot__button {
+    @include font-inter-s(16px);
+    min-width: 150px;
+  }
+
+  .tarot__one-container {
+    padding: 0 20px;
+  }
+
+  .tarot__img-container {
+    max-width: 400px;
+    width: 90%;
+    height: auto;
+  }
+
+  .tarot__img {
+    width: 90%;
+    max-width: 90%;
+    padding: 25px;
+  }
+
+  .tarot__new-card-button {
+    padding: 10px 20px;
+    @include font-inter-s(20px);
+  }
 }
