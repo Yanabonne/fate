@@ -62,42 +62,46 @@ export default function OneCard() {
             <div className="tarot__curved_1"></div>
             <div className="tarot__curved_2"></div>
           </div>
-          <div className="tarot__one-container">
-            <h2 className="tarot__subtitle tarot__subtitle_one">
-              {selectedCard.name}
-            </h2>
-            <p className="tarot__all-title">Общее значение: прямое положение</p>
-            <p className="tarot__all-text">{selectedCard.meaning}</p>
-            <p className="tarot__all-title">
-              Общее значение: перевернутое положение
-            </p>
-            <p className="tarot__all-text">{selectedCard.meaning_r}</p>
-            <p className="tarot__all-title">
-              Значение в любви и отношениях: прямое положение
-            </p>
-            <p className="tarot__all-text">{selectedCard.love}</p>
-            <p className="tarot__all-title">
-              Значение в любви и отношениях: перевернутое положение
-            </p>
-            <p className="tarot__all-text">{selectedCard.love_r}</p>
-            <p className="tarot__all-title">
-              Значение в ситуации и вопросе: прямое положение
-            </p>
-            <p className="tarot__all-text">{selectedCard.situation}</p>
-            <p className="tarot__all-title">
-              Значение в ситуации и вопросе: перевернутое положение
-            </p>
-            <p className="tarot__all-text">{selectedCard.situation_r}</p>
-            <p className="tarot__all-title">Значение карты дня</p>
-            <p className="tarot__all-text">{selectedCard.day}</p>
-            <p className="tarot__all-title">Совет карты</p>
-            <p className="tarot__all-text">{selectedCard.advice}</p>
-            <button
-              className="tarot__new-card-button"
-              onClick={() => setIsCardSelected(false)}
-            >
-              Выбрать другую карту
-            </button>
+          <div className="tarot__one-container-outer">
+            <div className="tarot__one-container">
+              <h2 className="tarot__subtitle tarot__subtitle_one">
+                {selectedCard.name}
+              </h2>
+              <p className="tarot__all-title">
+                Общее значение: прямое положение
+              </p>
+              <p className="tarot__all-text">{selectedCard.meaning}</p>
+              <p className="tarot__all-title">
+                Общее значение: перевернутое положение
+              </p>
+              <p className="tarot__all-text">{selectedCard.meaning_r}</p>
+              <p className="tarot__all-title">
+                Значение в любви и отношениях: прямое положение
+              </p>
+              <p className="tarot__all-text">{selectedCard.love}</p>
+              <p className="tarot__all-title">
+                Значение в любви и отношениях: перевернутое положение
+              </p>
+              <p className="tarot__all-text">{selectedCard.love_r}</p>
+              <p className="tarot__all-title">
+                Значение в ситуации и вопросе: прямое положение
+              </p>
+              <p className="tarot__all-text">{selectedCard.situation}</p>
+              <p className="tarot__all-title">
+                Значение в ситуации и вопросе: перевернутое положение
+              </p>
+              <p className="tarot__all-text">{selectedCard.situation_r}</p>
+              <p className="tarot__all-title">Значение карты дня</p>
+              <p className="tarot__all-text">{selectedCard.day}</p>
+              <p className="tarot__all-title">Совет карты</p>
+              <p className="tarot__all-text">{selectedCard.advice}</p>
+              <button
+                className="tarot__new-card-button"
+                onClick={() => setIsCardSelected(false)}
+              >
+                Выбрать другую карту
+              </button>
+            </div>
           </div>
           <div className="tarot_curved_bottom">
             <div className="tarot__curved_3"></div>
