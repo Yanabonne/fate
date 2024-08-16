@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./pages/Home";
 import Account from "./pages/Account";
 import Cycles from "./pages/Cycles";
+import Tarot from "./pages/Tarot";
 import { ToastContainer, Zoom } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="fate" element={<Home />} />
         <Route path="account" element={<Account />} />
         <Route path="cycles" element={<Cycles />} />
+        <Route path="tarot" element={<Tarot />} />
         <Route path="*" element={<Navigate to="fate" />} />
       </Routes>
       <ToastContainer
