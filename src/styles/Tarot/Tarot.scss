@@ -228,6 +228,10 @@
   object-fit: contain;
 }
 
+.tarot__flip-img-back-2__rev {
+  transform: scaleY(-1) scaleX(-1);
+}
+
 .tarot__flip-card-front {
   background-color: #bbb;
   color: black;

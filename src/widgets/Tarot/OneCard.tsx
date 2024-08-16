@@ -17,6 +17,7 @@ type TCard = {
 
 export default function OneCard() {
   const [isCardSelected, setIsCardSelected] = useState(false);
+  const [isCardFlipped, setIsCardFlipped] = useState(false);
   const [selectedCard, setSelectedCard] = useState<TCard>();
 
   useEffect(() => {
@@ -24,6 +25,7 @@ export default function OneCard() {
       setSelectedCard(
         tarotCardsList[Math.floor(Math.random() * tarotCardsList.length)]
       );
+      setIsCardFlipped(Math.floor(Math.random() * 2) === 0);
     }
   }, [isCardSelected]);
 
@@ -50,7 +52,11 @@ export default function OneCard() {
               <img
                 src={selectedCard?.link}
                 alt="Карта"
-                className="tarot__flip-img-back-2"
+                className={
+                  isCardFlipped
+                    ? "tarot__flip-img-back-2"
+                    : "tarot__flip-img-back-2 tarot__flip-img-back-2__rev"
+                }
               ></img>
             )}
           </div>
