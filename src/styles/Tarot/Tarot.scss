@@ -325,3 +325,29 @@
     @include font-inter-s(20px);
   }
 }
+
+@media screen and (max-width: 500px) {
+  .tarot__flip-card {
+    max-width: 320px;
+    width: 90%;
+    height: 610px;
+  }
+
+  .tarot__flip-img-back {
+    width: 320px;
+    height: 610px;
+    object-fit: contain;
+    background-color: black;
+    object-position: 50% 50%;
+    object-fit: cover;
+  }
+
+  .tarot__flip-img-back-2 {
+    width: 310px;
+    height: 610px;
+    object-fit: contain;
+    background-color: white;
+    object-position: 50% 50%;
+    object-fit: contain;
+  }
+}

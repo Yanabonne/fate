@@ -42,7 +42,7 @@ export default function Header() {
             onClick={() => setIsBurgerPopupOpen(false)}
           />
           <nav className="header__nav">
-            <a
+            {/* <a
               className={
                 activeLink === "about"
                   ? "header__link header__link_active"
@@ -51,7 +51,7 @@ export default function Header() {
               onClick={() => navigate("/about")}
             >
               О проекте
-            </a>
+            </a> */}
             <a
               className={
                 activeLink === "account"

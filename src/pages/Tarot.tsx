@@ -9,7 +9,7 @@ export default function Tarot() {
     <div className="tarot">
       <Header />
       <TarotCard />
-      <Footer />
+      <Footer noIcon={true} />
     </div>
   );
 }
