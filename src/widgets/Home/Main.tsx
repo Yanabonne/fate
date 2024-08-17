@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import deckImg from "../../images/deck.png";
 import cardImg from "../../images/card.png";
 import wisdomImg from "../../images/wisdom.png";
+import { useNavigate } from "react-router-dom";
 
 const wolfQuotes = [
   "Волк не тот, кто волк, а тот, кто волк",
@@ -17,6 +18,8 @@ const wolfQuotes = [
 
 export default function Main() {
   const [wolfQuote, setWolfQuote] = useState("");
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setWolfQuote(wolfQuotes[Math.floor(Math.random() * wolfQuotes.length)]);
@@ -49,7 +52,10 @@ export default function Main() {
             <p className="main__text_s">
               Однокарточный расклад на классической колоде таро.
             </p>
-            <button className="main__button main__button_services">
+            <button
+              className="main__button main__button_services"
+              onClick={() => navigate("/tarot")}
+            >
               Хочу!
             </button>
           </div>
@@ -59,7 +65,10 @@ export default function Main() {
               Включают в себя эмоциональный, психологический и интеллектуальный.
               Рассчитываются по дате рождения.
             </p>
-            <button className="main__button main__button_services">
+            <button
+              className="main__button main__button_services"
+              onClick={() => navigate("/cycles")}
+            >
               Хочу!
             </button>
           </div>
@@ -68,7 +77,10 @@ export default function Main() {
             <p className="main__text_s">
               Фазы луны и как они влияют на нас в разных положениях.
             </p>
-            <button className="main__button main__button_services">
+            <button
+              className="main__button main__button_services"
+              onClick={() => navigate("/moon")}
+            >
               Хочу!
             </button>
           </div>
@@ -79,14 +91,13 @@ export default function Main() {
           <div className="main__container">
             <h2 className="main__title main__text_light">Обо мне</h2>
             <div className="main__text main__text_light">
-              Я начала увлекаться эзотерикой ещё в школе, и рассматриваю её как
-              терапию, которая позволяет заглянуть глубже в себя, свои истинные
-              желания и мотивы. Вам не обязательно верить во всё, что здесь
-              написано, главное enjoy and have fun!
+              Я начала увлекаться эзотерикой ещё в школе, она приносит позитив в
+              тяжёлые времена и иногда даёт хорошие советы. Вам не обязательно
+              верить во всё, что здесь написано, главное enjoy and have fun!
             </div>
-            <button className="main__button main__button_light main__button_about">
+            {/* <button className="main__button main__button_light main__button_about">
               О проекте
-            </button>
+            </button> */}
           </div>
           <img
             className="main__img main__img_card"

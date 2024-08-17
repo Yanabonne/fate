@@ -72,7 +72,7 @@ export default function Form() {
         <input
           placeholder="Введите свою дату рождения"
           className="account__input"
-          type="datetime-local"
+          type="date"
           value={inputDate}
           ref={inputDateRef}
           onChange={(e) => {
