@@ -10,7 +10,7 @@ type props = {
 
 export default function Footer({ noIcon, topBorder }: props) {
   return (
-    <header className="footer">
+    <footer className="footer">
       <div
         className="footer__footer"
         style={topBorder ? { borderTop: "#262225 solid 1px" } : {}}
@@ -44,6 +44,6 @@ export default function Footer({ noIcon, topBorder }: props) {
           </a>
         </div>
       </div>
-    </header>
+    </footer>
   );
 }

@@ -1,0 +1,169 @@
+@import "../../vendor/fonts.scss";
+
+.moon {
+  margin-top: 90px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.moon__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.moon__container_beige {
+  background-color: #d7cddf;
+  color: #262225;
+}
+
+.moon__container_purple {
+  background-color: #473243;
+  color: #d7cddf;
+}
+
+.moon__section {
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  max-width: 1300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.moon__section_calendar {
+  padding: 60px 30px;
+  gap: 0;
+  flex-direction: column;
+}
+
+.moon__scroll {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+
+.moon__section_main {
+  padding: 40px 30px 60px;
+  gap: 50px;
+}
+
+.moon__section_no-info {
+  flex-direction: column;
+  min-height: calc(100vh - 200px);
+  max-width: 700px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0;
+  padding: 30px;
+}
+
+.moon__title {
+  @include font-corm-xs(60px);
+  margin: 30px 0;
+}
+
+.moon__subtitle {
+  @include font-inter-s(24px);
+  margin: 0 0 30px;
+}
+
+.moon__img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+}
+
+.moon__info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.moon__title-2 {
+  @include font-corm-xs(50px);
+  padding-bottom: 15px;
+}
+
+.moon__text {
+  @include font-inter-s(24px);
+  line-height: 1.2;
+}
+
+.moon__text_span {
+  //   @include font-inter-xl(24px);
+  @include font-corm-xs(32px);
+}
+
+.moon_curved {
+  padding: 15px 0 0;
+  max-width: none;
+  margin-bottom: -2px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.moon_curved_bottom {
+  padding: 0;
+  max-width: none;
+  margin-top: -2px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.moon__curved_1 {
+  background-color: #473243;
+  border-radius: 0 30px 0 0;
+  height: 50px;
+  width: 50%;
+}
+
+.moon__curved_2 {
+  background-color: #473243;
+  border-radius: 30px 0 0 0;
+  height: 50px;
+  width: 50%;
+}
+
+.moon__curved_3 {
+  background-color: #d7cddf;
+  border-radius: 0 0 30px 0;
+  height: 50px;
+  width: 50%;
+}
+
+.moon__curved_4 {
+  background-color: #d7cddf;
+  border-radius: 0 0 0 30px;
+  height: 50px;
+  width: 50%;
+}
+
+.moon__grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0 30px;
+  min-height: 100px;
+  align-items: center;
+  border-top: 1px solid #262225;
+  @include font-inter-s(20px);
+  min-width: 1100px;
+}
+
+.moon__grid_main {
+  @include font-corm-xs(22px);
+}
+
+.moon__grid:first-of-type {
+  margin-top: 50px;
+}
+
+.moon__grid:last-of-type {
+  border-bottom: 1px solid #262225;
+}
