@@ -97,6 +97,9 @@ export default function MoonPhases({ geoData }: TMoonProps) {
       <div className="moon__container moon__container_beige">
         <section className="moon__section moon__section_calendar">
           <h2 className="moon__title-2">Две недели</h2>
+          <h2 className="moon__text_mobile">
+            *Для просмотра таблицы листайте вправо
+          </h2>
           <div className="moon__scroll">
             <div className="moon__grid moon__grid_main">
               <p>Дата</p>

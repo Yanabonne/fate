@@ -153,7 +153,7 @@
   align-items: center;
   border-top: 1px solid #262225;
   @include font-inter-s(20px);
-  min-width: 1100px;
+  min-width: 950px;
 }
 
 .moon__grid_main {
@@ -166,4 +166,59 @@
 
 .moon__grid:last-of-type {
   border-bottom: 1px solid #262225;
+}
+
+.moon__text_mobile {
+  display: none;
+  @include font-inter-s(16px);
+  align-self: center;
+}
+
+@media screen and (max-width: 990px) {
+  .moon__section_main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .moon__title-2 {
+    align-self: center;
+    padding-bottom: 20px;
+    font-size: 35px;
+  }
+
+  .moon__img {
+    width: 100%;
+  }
+
+  .moon__title {
+    @include font-corm-xs(35px);
+    margin: 30px 0;
+  }
+
+  .moon__subtitle {
+    @include font-inter-s(20px);
+    margin: 0 0 30px;
+  }
+
+  .moon__text {
+    @include font-inter-s(20px);
+    line-height: 1.2;
+  }
+
+  .moon__text_span {
+    //   @include font-inter-xl(24px);
+    @include font-corm-xs(30px);
+  }
+
+  .moon__grid:first-of-type {
+    margin-top: 20px;
+  }
+
+  .moon__text_mobile {
+    display: block;
+  }
+
+  .moon__grid {
+    min-width: 1100px;
+  }
 }
