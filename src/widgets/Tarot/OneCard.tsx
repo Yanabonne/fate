@@ -25,7 +25,7 @@ export default function OneCard() {
       setSelectedCard(
         tarotCardsList[Math.floor(Math.random() * tarotCardsList.length)]
       );
-      setIsCardFlipped(Math.floor(Math.random() * 2) === 0);
+      setIsCardFlipped(Math.floor(Math.random() * 4) === 0);
     }
   }, [isCardSelected]);
 
@@ -54,8 +54,8 @@ export default function OneCard() {
                 alt="Карта"
                 className={
                   isCardFlipped
-                    ? "tarot__flip-img-back-2"
-                    : "tarot__flip-img-back-2 tarot__flip-img-back-2__rev"
+                    ? "tarot__flip-img-back-2 tarot__flip-img-back-2__rev"
+                    : "tarot__flip-img-back-2"
                 }
               ></img>
             )}
