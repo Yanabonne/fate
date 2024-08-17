@@ -29,10 +29,12 @@ export default function Main() {
     <>
       <section className="main main_1">
         <h1 className="main__title main__title_1">
-          Немного магии и ничего лишнего
+          {localStorage.getItem("username")
+            ? `Добрый день, ${localStorage.getItem("username")}`
+            : "Немного магии и ничего лишнего"}
         </h1>
         <p className="main__subtitle">
-          Узнай своё прошлое, настоящее и будущее
+          Узнайте своё прошлое, настоящее и будущее
         </p>
         <img
           className="main__img main__img_deck"
