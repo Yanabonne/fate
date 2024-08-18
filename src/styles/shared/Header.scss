@@ -136,4 +136,8 @@
       width: 25px;
     }
   }
+
+  .header__header {
+    width: calc(100% - 40px);
+  }
 }
