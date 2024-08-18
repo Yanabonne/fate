@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/fate/static/css/main.1a0ab7f0.css",
+    "main.css": "/fate/static/css/main.5f17f6ba.css",
     "main.js": "/fate/static/js/main.3357c0d8.js",
     "static/js/453.68693753.chunk.js": "/fate/static/js/453.68693753.chunk.js",
     "static/media/card.png": "/fate/static/media/card.4fc04257b53221aaf5f1.png",
@@ -15,12 +15,12 @@
     "static/media/Inter-Black.woff2": "/fate/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
     "static/media/Inter-Regular.woff2": "/fate/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
     "index.html": "/fate/index.html",
-    "main.1a0ab7f0.css.map": "/fate/static/css/main.1a0ab7f0.css.map",
+    "main.5f17f6ba.css.map": "/fate/static/css/main.5f17f6ba.css.map",
     "main.3357c0d8.js.map": "/fate/static/js/main.3357c0d8.js.map",
     "453.68693753.chunk.js.map": "/fate/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a0ab7f0.css",
+    "static/css/main.5f17f6ba.css",
     "static/js/main.3357c0d8.js"
   ]
 }
