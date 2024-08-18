@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a29a90a5.css",
+    "main.js": "/static/js/main.861b3498.js",
+    "static/js/453.68693753.chunk.js": "/static/js/453.68693753.chunk.js",
+    "static/media/card.png": "/static/media/card.4fc04257b53221aaf5f1.png",
+    "static/media/deck.png": "/static/media/deck.b30e1aa4f983d62c0c80.png",
+    "static/media/moon-2.png": "/static/media/moon-2.f096c77a89c8fcabcbfa.png",
+    "static/media/wisdom.png": "/static/media/wisdom.0954c896e63ab1324932.png",
+    "static/media/card-back.jpg": "/static/media/card-back.6b76d730bf5e1d775315.jpg",
+    "static/media/Inter-Medium.woff": "/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff": "/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff": "/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Medium.woff2": "/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2": "/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2": "/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "index.html": "/index.html",
+    "main.a29a90a5.css.map": "/static/css/main.a29a90a5.css.map",
+    "main.861b3498.js.map": "/static/js/main.861b3498.js.map",
+    "453.68693753.chunk.js.map": "/static/js/453.68693753.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a29a90a5.css",
+    "static/js/main.861b3498.js"
+  ]
+}
