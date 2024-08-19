@@ -159,4 +159,17 @@
       width: 100%;
     }
   }
+
+  .cycles__tooltip {
+    gap: 5px;
+    padding: 5px;
+
+    small {
+      @include font-inter-s(14px);
+    }
+
+    span {
+      @include font-corm-xs(16px);
+    }
+  }
 }
