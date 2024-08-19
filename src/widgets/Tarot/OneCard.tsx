@@ -26,6 +26,13 @@ export default function OneCard() {
         tarotCardsList[Math.floor(Math.random() * tarotCardsList.length)]
       );
       setIsCardFlipped(Math.floor(Math.random() * 4) === 0);
+    } else {
+      const header = document.querySelector(".header");
+      if (header) {
+        header.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
     }
   }, [isCardSelected]);
 
