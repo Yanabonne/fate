@@ -22,6 +22,9 @@
   button,
   p {
     width: 100%;
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
   }
 }
 
