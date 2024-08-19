@@ -24,6 +24,18 @@ export default function TarotCard() {
         </button>
         <button
           className={
+            section === "card-day"
+              ? "tarot__button tarot__button_active"
+              : "tarot__button"
+          }
+          onClick={() => {
+            setSection("card-day");
+          }}
+        >
+          Карта дня
+        </button>
+        <button
+          className={
             section === "all-cards"
               ? "tarot__button tarot__button_active"
               : "tarot__button"
@@ -37,9 +49,9 @@ export default function TarotCard() {
       </div>
       <section
         className={
-          section === "one-card"
+          section !== "all-cards"
             ? "tarot__section tarot__section_one"
-            : "tarot__section"
+            : "tarot__section tarot__section_all"
         }
       >
         {section === "all-cards" && (
@@ -56,6 +68,7 @@ export default function TarotCard() {
           </>
         )}
         {section === "one-card" && <OneCard />}
+        {section === "card-day" && <OneCard isCardDay={true} />}
       </section>
     </>
   );

@@ -15,23 +15,51 @@ type TCard = {
   advice: string;
 };
 
-export default function OneCard() {
+type TCardProps = {
+  isCardDay?: boolean;
+};
+
+export default function OneCard({ isCardDay }: TCardProps) {
   const [isCardSelected, setIsCardSelected] = useState(false);
   const [isCardFlipped, setIsCardFlipped] = useState(false);
   const [selectedCard, setSelectedCard] = useState<TCard>();
 
   useEffect(() => {
-    if (isCardSelected) {
-      setSelectedCard(
-        tarotCardsList[Math.floor(Math.random() * tarotCardsList.length)]
-      );
-      setIsCardFlipped(Math.floor(Math.random() * 4) === 0);
+    if (!isCardDay) {
+      if (isCardSelected) {
+        setSelectedCard(
+          tarotCardsList[Math.floor(Math.random() * tarotCardsList.length)]
+        );
+        setIsCardFlipped(Math.floor(Math.random() * 4) === 0);
+      } else {
+        const header = document.querySelector(".header");
+        if (header) {
+          header.scrollIntoView({
+            behavior: "smooth",
+          });
+        }
+      }
     } else {
-      const header = document.querySelector(".header");
-      if (header) {
-        header.scrollIntoView({
-          behavior: "smooth",
-        });
+      if (!isCardSelected) {
+        if (
+          localStorage.getItem("selected-card-id") &&
+          localStorage.getItem("is-card-flipped")
+        ) {
+          const cardId = Number(localStorage.getItem("selected-card-id"));
+          setSelectedCard(tarotCardsList[cardId]);
+          setIsCardFlipped(localStorage.getItem("is-card-flipped") === "true");
+          setIsCardSelected(true);
+        } else {
+          const isFlipped = Math.floor(Math.random() * 4) === 0;
+          const cardId = Math.floor(Math.random() * tarotCardsList.length);
+
+          setSelectedCard(tarotCardsList[cardId]);
+          setIsCardFlipped(isFlipped);
+          setIsCardSelected(true);
+
+          localStorage.setItem("is-card-flipped", `${isFlipped}`);
+          localStorage.setItem("selected-card-id", `${cardId}`);
+        }
       }
     }
   }, [isCardSelected]);
@@ -44,7 +72,11 @@ export default function OneCard() {
             ? "tarot__flip-card tarot__flip-card_active"
             : "tarot__flip-card"
         }
-        onClick={() => setIsCardSelected(!isCardSelected)}
+        onClick={() => {
+          if (!isCardDay) {
+            setIsCardSelected(!isCardSelected);
+          }
+        }}
       >
         <div className="tarot__flip-card-inner">
           <div className="tarot__flip-card-front">
@@ -108,12 +140,14 @@ export default function OneCard() {
               <p className="tarot__all-text">{selectedCard.day}</p>
               <p className="tarot__all-title">Совет карты</p>
               <p className="tarot__all-text">{selectedCard.advice}</p>
-              <button
-                className="tarot__new-card-button"
-                onClick={() => setIsCardSelected(false)}
-              >
-                Выбрать другую карту
-              </button>
+              {!isCardDay && (
+                <button
+                  className="tarot__new-card-button"
+                  onClick={() => setIsCardSelected(false)}
+                >
+                  Выбрать другую карту
+                </button>
+              )}
             </div>
           </div>
           <div className="tarot_curved_bottom">
