@@ -43,7 +43,10 @@ export default function OneCard({ isCardDay }: TCardProps) {
       if (!isCardSelected) {
         if (
           localStorage.getItem("selected-card-id") &&
-          localStorage.getItem("is-card-flipped")
+          localStorage.getItem("is-card-flipped") &&
+          localStorage.getItem("day-card-date") &&
+          new Date(`${localStorage.getItem("day-card-date")}`) >=
+            new Date(new Date().setHours(0, 0, 0, 0))
         ) {
           const cardId = Number(localStorage.getItem("selected-card-id"));
           setSelectedCard(tarotCardsList[cardId]);
@@ -59,6 +62,7 @@ export default function OneCard({ isCardDay }: TCardProps) {
 
           localStorage.setItem("is-card-flipped", `${isFlipped}`);
           localStorage.setItem("selected-card-id", `${cardId}`);
+          localStorage.setItem("day-card-date", new Date().toString());
         }
       }
     }
