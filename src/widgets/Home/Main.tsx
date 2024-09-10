@@ -93,8 +93,8 @@ export default function Main() {
           <div className="main__container">
             <h2 className="main__title main__text_light">Обо мне</h2>
             <div className="main__text main__text_light">
-              Я начала увлекаться эзотерикой ещё в школе, она приносит позитив в
-              тяжёлые времена и иногда даёт хорошие советы. Вам не обязательно
+              Я начала увлекаться эзотерикой ещё в школе, она приносит надежду в
+              тяжёлые времена и может дать хорошие советы. Вам не обязательно
               верить во всё, что здесь написано, главное enjoy and have fun!
             </div>
             {/* <button className="main__button main__button_light main__button_about">
