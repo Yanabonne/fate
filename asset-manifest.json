@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fate/static/css/main.0485ce60.css",
-    "main.js": "/fate/static/js/main.faa077c8.js",
+    "main.js": "/fate/static/js/main.ca8c53a4.js",
     "static/js/453.68693753.chunk.js": "/fate/static/js/453.68693753.chunk.js",
     "static/media/card.png": "/fate/static/media/card.4fc04257b53221aaf5f1.png",
     "static/media/deck.png": "/fate/static/media/deck.b30e1aa4f983d62c0c80.png",
@@ -16,11 +16,11 @@
     "static/media/Inter-Regular.woff2": "/fate/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
     "index.html": "/fate/index.html",
     "main.0485ce60.css.map": "/fate/static/css/main.0485ce60.css.map",
-    "main.faa077c8.js.map": "/fate/static/js/main.faa077c8.js.map",
+    "main.ca8c53a4.js.map": "/fate/static/js/main.ca8c53a4.js.map",
     "453.68693753.chunk.js.map": "/fate/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0485ce60.css",
-    "static/js/main.faa077c8.js"
+    "static/js/main.ca8c53a4.js"
   ]
 }
